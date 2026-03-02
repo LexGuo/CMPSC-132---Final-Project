@@ -2,11 +2,12 @@
 from MailingAddress import MailingAddress
 from Phone import Phone
 from Date import Date
+from EmailAddress import EmailAddress
 
 class Person:
     # Constructor
     def __init__(self, name_first: str, name_last: str, name_middle: str = None,
-                 address: MailingAddress = None, emails: list[Email] = None, phones: list[Phone] = None, birth_date: Date = None):
+                 address: MailingAddress = None, emails: list[EmailAddress] = None, phones: list[Phone] = None, birth_date: Date = None):
         self.__name_first = name_first
         self.__name_last = name_last
         self.__name_middle = name_middle
@@ -28,7 +29,7 @@ class Person:
     def set_mailing_address(self, address: MailingAddress):
         self.__mailing_address = address
 
-    def set_email_addresses(self, emails: list[Email]):
+    def set_email_addresses(self, emails: list[EmailAddress]):
         self.__email_addresses = emails
 
     def set_phones(self, phones: list[Phone]):
